@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160916131328) do
+ActiveRecord::Schema.define(version: 20160922190403) do
 
   create_table "shares", force: :cascade do |t|
     t.integer  "amount",     null: false
@@ -25,10 +25,15 @@ ActiveRecord::Schema.define(version: 20160916131328) do
   add_index "shares", ["wine_id"], name: "index_shares_on_wine_id"
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",                null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "email_address",       null: false
+    t.string   "mobile_phone_number"
   end
+
+  add_index "users", ["email_address"], name: "index_users_on_email_address", unique: true
+  add_index "users", ["mobile_phone_number"], name: "index_users_on_mobile_phone_number", unique: true
 
   create_table "wines", force: :cascade do |t|
     t.string   "name",         null: false

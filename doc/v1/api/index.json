@@ -1,0 +1,117 @@
+{
+  "resources": [
+    {
+      "name": "Shares",
+      "examples": [
+        {
+          "description": "GET /v1/shares",
+          "link": "shares/get_v1shares.json",
+          "groups": "all",
+          "route": "/v1/shares",
+          "method": "get"
+        },
+        {
+          "description": "DELETE /v1/shares/:id",
+          "link": "shares/delete_v1shares:id.json",
+          "groups": "all",
+          "route": "/v1/shares/:share_id",
+          "method": "delete"
+        },
+        {
+          "description": "GET /v1/shares/:id",
+          "link": "shares/get_v1shares:id.json",
+          "groups": "all",
+          "route": "/v1/shares/:share_id",
+          "method": "get"
+        },
+        {
+          "description": "POST /v1/shares",
+          "link": "shares/post_v1shares.json",
+          "groups": "all",
+          "route": "/v1/shares",
+          "method": "post"
+        },
+        {
+          "description": "PATCH /v1/shares/:id",
+          "link": "shares/patch_v1shares:id.json",
+          "groups": "all",
+          "route": "/v1/shares/:share_id",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "name": "Wines",
+      "examples": [
+        {
+          "description": "GET /v1/wines",
+          "link": "wines/get_v1wines.json",
+          "groups": "all",
+          "route": "/v1/wines",
+          "method": "get"
+        },
+        {
+          "description": "DELETE /v1/wines/:id",
+          "link": "wines/delete_v1wines:id.json",
+          "groups": "all",
+          "route": "/v1/wines/:id",
+          "method": "delete"
+        },
+        {
+          "description": "PATCH /v1/wines/:id",
+          "link": "wines/patch_v1wines:id.json",
+          "groups": "all",
+          "route": "/v1/wines/:wine_id",
+          "method": "patch"
+        },
+        {
+          "description": "GET /v1/wines/:id",
+          "link": "wines/get_v1wines:id.json",
+          "groups": "all",
+          "route": "/v1/wines/:id",
+          "method": "get"
+        },
+        {
+          "description": "POST /v1/wines",
+          "link": "wines/post_v1wines.json",
+          "groups": "all",
+          "route": "/v1/wines",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "examples": [
+        {
+          "description": "GET /v1/users/:id",
+          "link": "users/get_v1users:id.json",
+          "groups": "all",
+          "route": "/v1/users/:user_id",
+          "method": "get"
+        },
+        {
+          "description": "GET /v1/users",
+          "link": "users/get_v1users.json",
+          "groups": "all",
+          "route": "/v1/users",
+          "method": "get"
+        },
+        {
+          "description": "PATCH /v1/users/:id",
+          "link": "users/patch_v1users:id.json",
+          "groups": "all",
+          "route": "/v1/users/:user_id",
+          "method": "patch"
+        },
+        {
+          "description": "POST /v1/users",
+          "link": "users/post_v1users.json",
+          "groups": "all",
+          "route": "/v1/users",
+          "method": "post"
+        }
+      ]
+    }
+  ]
+}

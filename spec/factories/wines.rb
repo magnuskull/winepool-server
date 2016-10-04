@@ -1,10 +1,10 @@
 FactoryGirl.define do
   factory :wine do
-    name "MyString"
-description "MyText"
-created_at "2016-09-15 22:28:12"
-bottles 1
-price 1
+    name "Barolo"
+    description "Medium+ acidity, well balanced. Needs age."
+    bottles 6
+    price 179
+    association :suggester, strategy: :build
   end
 
 end

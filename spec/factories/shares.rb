@@ -1,6 +1,8 @@
 FactoryGirl.define do
   factory :share do
-    amount 1
+    association :user, strategy: :build
+    association :wine, strategy: :build
+    amount 2
   end
 
 end

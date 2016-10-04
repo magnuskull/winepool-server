@@ -1,0 +1,56 @@
+{
+  "resource": "Shares",
+  "http_method": "POST",
+  "route": "/v1/shares",
+  "description": "POST /v1/shares",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "type",
+      "description": "      The type of resource. Must be 'shares'.\n"
+    },
+    {
+      "scope": "attributes",
+      "required": true,
+      "name": "amount",
+      "description": "      The amount of bottles in the share.\n"
+    },
+    {
+      "scope": "relationships",
+      "required": true,
+      "name": "wine",
+      "description": "      The wine to share.\n"
+    },
+    {
+      "scope": "relationships",
+      "required": true,
+      "name": "user",
+      "description": "      The user that owns the share.\n"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/v1/shares",
+      "request_body": "{\"data\":{\"type\":\"shares\",\"attributes\":{\"amount\":3},\"relationships\":{\"wine\":{\"data\":{\"type\":\"wines\",\"id\":\"1\"}},\"user\":{\"data\":{\"type\":\"users\",\"id\":\"2\"}}}}}",
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"data\":{\"id\":\"1\",\"type\":\"shares\",\"links\":{\"self\":\"http://example.org/v1/shares/1\"},\"attributes\":{\"amount\":3},\"relationships\":{\"user\":{\"links\":{\"self\":\"http://example.org/v1/shares/1/relationships/user\",\"related\":\"http://example.org/v1/shares/1/user\"}},\"wine\":{\"links\":{\"self\":\"http://example.org/v1/shares/1/relationships/wine\",\"related\":\"http://example.org/v1/shares/1/wine\"}}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json; charset=utf-8"
+      },
+      "response_content_type": "application/vnd.api+json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

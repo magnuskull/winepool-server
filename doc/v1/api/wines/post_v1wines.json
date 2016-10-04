@@ -1,0 +1,67 @@
+{
+  "resource": "Wines",
+  "http_method": "POST",
+  "route": "/v1/wines",
+  "description": "POST /v1/wines",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "type",
+      "description": "      The type of the resource. Must be 'wines'.\n"
+    },
+    {
+      "scope": "attributes",
+      "required": true,
+      "name": "name",
+      "description": "      The name of the wine.\n"
+    },
+    {
+      "scope": "attributes",
+      "name": "description",
+      "description": "      The description of the wine.\n"
+    },
+    {
+      "scope": "attributes",
+      "required": true,
+      "name": "bottles",
+      "description": "      The number of bottles required for an order.\n"
+    },
+    {
+      "scope": "attributes",
+      "required": true,
+      "name": "price",
+      "description": "      The price of the wine per bottle.\n"
+    },
+    {
+      "required": true,
+      "scope": "relationships",
+      "name": "suggester",
+      "description": "      The user that suggests to buy the wine.\n"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/v1/wines",
+      "request_body": "{\"data\":{\"type\":\"wines\",\"attributes\":{\"name\":\"Barolo\",\"description\":\"Medium+ acidity. Needs time.\",\"bottles\":6,\"price\":179},\"relationships\":{\"suggester\":{\"data\":{\"type\":\"users\",\"id\":\"1\"}}}}}",
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"data\":{\"id\":\"1\",\"type\":\"wines\",\"links\":{\"self\":\"http://example.org/v1/wines/1\"},\"attributes\":{\"name\":\"Barolo\",\"description\":\"Medium+ acidity. Needs time.\",\"bottles\":6,\"price\":179,\"fulfilled\":false},\"relationships\":{\"suggester\":{\"links\":{\"self\":\"http://example.org/v1/wines/1/relationships/suggester\",\"related\":\"http://example.org/v1/wines/1/suggester\"}},\"shares\":{\"links\":{\"self\":\"http://example.org/v1/wines/1/relationships/shares\",\"related\":\"http://example.org/v1/wines/1/shares\"}}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json; charset=utf-8"
+      },
+      "response_content_type": "application/vnd.api+json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
